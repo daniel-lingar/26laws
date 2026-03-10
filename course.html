@@ -5,175 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Course | The Wounded Blueprint</title>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
     <style>
-        :root {
-            --academic-navy: #1A2B44;
-            --oxford-red: #8B0000;
-            --paper-cream: #FDFCF8;
-            --ink-black: #1F1F1F;
-            --muted-gold: #B4975A;
-            --border-color: #D1CEC7;
-        }
-
+        :root { --academic-navy: #1A2B44; --oxford-red: #8B0000; --paper-cream: #FDFCF8; --ink-black: #1F1F1F; --muted-gold: #B4975A; --border-color: #D1CEC7; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            background-color: var(--paper-cream);
-            color: var(--ink-black);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.7;
-        }
-
+        body { background-color: var(--paper-cream); color: var(--ink-black); font-family: 'Inter', sans-serif; line-height: 1.7; }
         .mono { font-family: 'Courier Prime', monospace; text-transform: uppercase; letter-spacing: 1px; }
         .serif { font-family: 'Playfair Display', serif; }
-
-        /* --- NAVIGATION --- */
-        nav {
-            background: white;
-            padding: 20px;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--academic-navy);
-            font-size: 0.8rem;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
+        nav { background: white; padding: 20px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: center; gap: 30px; position: sticky; top: 0; z-index: 100; }
+        nav a { text-decoration: none; color: var(--academic-navy); font-size: 0.8rem; font-weight: 600; transition: color 0.3s; }
         nav a:hover { color: var(--muted-gold); }
-
-        /* --- HERO SECTION --- */
-        .course-header {
-            text-align: center;
-            padding: 80px 20px;
-            background: white;
-            border-bottom: 2px double var(--border-color);
-        }
-
-        .course-header h1 {
-            font-size: 3rem;
-            color: var(--academic-navy);
-            margin-bottom: 10px;
-        }
-
-        .course-badge {
-            display: inline-block;
-            border: 1px solid var(--muted-gold);
-            color: var(--muted-gold);
-            padding: 5px 15px;
-            margin-bottom: 20px;
-            font-size: 0.75rem;
-        }
-
-        /* --- CURRICULUM LAYOUT --- */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-
-        .section-intro {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .curriculum-module {
-            margin-bottom: 50px;
-            border-left: 3px solid var(--academic-navy);
-            padding-left: 30px;
-            position: relative;
-        }
-
-        .curriculum-module::before {
-            content: "";
-            position: absolute;
-            left: -9px;
-            top: 0;
-            width: 15px;
-            height: 15px;
-            background: var(--academic-navy);
-            border-radius: 50%;
-        }
-
-        .module-header {
-            color: var(--oxford-red);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .lecture-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .lecture-item {
-            background: white;
-            padding: 20px;
-            border: 1px solid var(--border-color);
-            transition: all 0.2s;
-        }
-
-        .lecture-item:hover {
-            border-color: var(--muted-gold);
-            background: #fffdf9;
-        }
-
-        .lecture-item h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: var(--academic-navy);
-        }
-
-        .lecture-item p {
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        /* --- CALL TO ACTION --- */
-        .waitlist-card {
-            background: var(--academic-navy);
-            color: white;
-            padding: 60px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
+        .course-header { text-align: center; padding: 80px 20px; background: white; border-bottom: 2px double var(--border-color); }
+        .course-header h1 { font-size: 3rem; color: var(--academic-navy); margin-bottom: 10px; }
+        .course-badge { display: inline-block; border: 1px solid var(--muted-gold); color: var(--muted-gold); padding: 5px 15px; margin-bottom: 20px; font-size: 0.75rem; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        .section-intro { text-align: center; margin-bottom: 60px; }
+        .curriculum-module { margin-bottom: 50px; border-left: 3px solid var(--academic-navy); padding-left: 30px; position: relative; }
+        .curriculum-module::before { content: ""; position: absolute; left: -9px; top: 0; width: 15px; height: 15px; background: var(--academic-navy); border-radius: 50%; }
+        .module-header { color: var(--oxford-red); font-size: 0.9rem; margin-bottom: 15px; }
+        .lecture-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .lecture-item { background: white; padding: 20px; border: 1px solid var(--border-color); transition: all 0.2s; }
+        .lecture-item:hover { border-color: var(--muted-gold); background: #fffdf9; }
+        .lecture-item h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--academic-navy); }
+        .lecture-item p { font-size: 0.9rem; color: #555; }
+        .lecture-item .lecture-num { font-size: 0.75rem; color: var(--muted-gold); font-family: 'Courier Prime', monospace; text-transform: uppercase; margin-bottom: 6px; }
+        .waitlist-card { background: var(--academic-navy); color: white; padding: 60px; text-align: center; margin-top: 40px; }
         .waitlist-card h2 { color: var(--muted-gold); margin-bottom: 20px; }
-
-        .btn-enroll {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 40px;
-            background: var(--muted-gold);
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.75rem;
-            color: #888;
-            border-top: 1px solid var(--border-color);
-        }
-
-        @media (max-width: 768px) {
-            .lecture-grid { grid-template-columns: 1fr; }
-            .course-header h1 { font-size: 2.2rem; }
-        }
+        .btn-enroll { display: inline-block; margin-top: 30px; padding: 15px 40px; background: var(--muted-gold); color: white; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        footer { text-align: center; padding: 40px; font-size: 0.75rem; color: #888; border-top: 1px solid var(--border-color); }
+        footer a { color: var(--academic-navy); text-decoration: none; }
+        footer a:hover { color: var(--muted-gold); }
+        @media (max-width: 768px) { .lecture-grid { grid-template-columns: 1fr; } .course-header h1 { font-size: 2.2rem; } }
     </style>
 </head>
 <body>
@@ -183,60 +44,64 @@
         <a href="the-26-laws.html">26 LAWS</a>
         <a href="course.html" style="color: var(--muted-gold);">COURSE</a>
         <a href="terminology.html">GLOSSARY</a>
+        <a href="who-i-am.html">ABOUT</a>
+        <a href="resources.html">RESOURCES</a>
     </nav>
 
     <header class="course-header">
         <div class="course-badge mono">ACADEMIC CURRICULUM 2025</div>
         <h1 class="serif">What Really Happened</h1>
-        <p class="mono">Understanding Complex PTSD Through Lived Experience & Clinical Rigor</p>
+        <p class="mono">Understanding Complex PTSD Through Lived Experience &amp; Clinical Rigor</p>
     </header>
 
     <div class="container">
-        
+
         <div class="section-intro">
             <h2 class="serif">The Wounded Blueprint Course</h2>
-            <p>A 16-lecture series designed as a Harvard-style seminar. This curriculum explores the clinical architecture of trauma using <i>From the Storm to the Fire</i> as a primary case study.</p>
+            <p>A 16-lecture series designed as a Harvard-style seminar. This curriculum explores the clinical architecture of trauma using <i>From the Storm to the Fire</i> as a primary case study. Each lecture pairs lived experience with peer-reviewed research.</p>
         </div>
 
+        <!-- PART I -->
         <div class="curriculum-module">
             <div class="module-header mono">PART I: FOUNDATIONS OF TRAUMA</div>
             <div class="lecture-grid">
-                <div class="lecture-item">
-                    <h3>01: The Truth Behind the Silence</h3>
-                    <p>Analysis of the initial fracture and the sociopolitical factors of trauma suppression.</p>
-                </div>
-                <div class="lecture-item">
-                    <h3>02: The Masks We Wear</h3>
-                    <p>Understanding adaptive personalities and the survival utility of the false self.</p>
-                </div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 01</div><h3>The Truth Behind the Silence</h3><p>Analysis of the initial fracture and the sociopolitical factors of trauma suppression.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 02</div><h3>The Masks We Wear</h3><p>Understanding adaptive personalities and the survival utility of the false self.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 03</div><h3>The Glass Box Blueprint</h3><p>NICU trauma, early nervous system wiring, and epigenetic inheritance before language.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 04</div><h3>Wired for War</h3><p>Neuroception, hypervigilance, and the brainstem threat response as adaptive genius.</p></div>
             </div>
         </div>
 
+        <!-- PART II -->
         <div class="curriculum-module">
-            <div class="module-header mono">PART II: RELATIONSHIPS & REALITY</div>
+            <div class="module-header mono">PART II: RELATIONSHIPS &amp; REALITY</div>
             <div class="lecture-grid">
-                <div class="lecture-item">
-                    <h3>03: When Love Hurts</h3>
-                    <p>The neurobiology of attachment in high-stress or abusive environments.</p>
-                </div>
-                <div class="lecture-item">
-                    <h3>04: The War on Reality</h3>
-                    <p>Gaslighting, cognitive dissonance, and the systematic dismantling of the victim's agency.</p>
-                </div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 05</div><h3>When Love Hurts</h3><p>The neurobiology of attachment in high-stress or abusive environments.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 06</div><h3>The War on Reality</h3><p>Gaslighting, cognitive dissonance, and the systematic dismantling of the victim’s agency.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 07</div><h3>Trauma Bonding</h3><p>Why the nervous system encodes the abuser as a lifeline—and what it takes to rewire.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 08</div><h3>The Fawn Response</h3><p>Appeasement as survival: people-pleasing, disappearing, and rebuilding identity after.</p></div>
             </div>
         </div>
 
+        <!-- PART III -->
         <div class="curriculum-module">
             <div class="module-header mono">PART III: INTERNAL LANDSCAPE</div>
             <div class="lecture-grid">
-                <div class="lecture-item">
-                    <h3>09: Shame vs. Responsibility</h3>
-                    <p>Deconstructing the "Internalized Aggressor" and the burden of unearned guilt.</p>
-                </div>
-                <div class="lecture-item">
-                    <h3>11: Temporal Dysregulation</h3>
-                    <p>Why trauma lives in the "now" and the challenge of establishing a linear future.</p>
-                </div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 09</div><h3>Shame vs. Responsibility</h3><p>Deconstructing the “Internalized Aggressor” and the burden of unearned guilt.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 10</div><h3>Internal Family Systems</h3><p>Meeting your parts: the Protector, the Exile, and the Caretaker still fighting the original war.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 11</div><h3>Temporal Dysregulation</h3><p>Why trauma lives in the “now” and the challenge of establishing a linear future.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 12</div><h3>The Body Keeps Score</h3><p>Somatic memory, chronic pain, and befriending the body that protected you.</p></div>
+            </div>
+        </div>
+
+        <!-- PART IV -->
+        <div class="curriculum-module">
+            <div class="module-header mono">PART IV: COLLAPSE &amp; EMERGENCE</div>
+            <div class="lecture-grid">
+                <div class="lecture-item"><div class="lecture-num">Lecture 13</div><h3>The Dark Night of the Soul</h3><p>Necessary deconstruction: when the armor fails and what lives underneath.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 14</div><h3>Rage as Sacred Energy</h3><p>Reclaiming suppressed anger as information, boundary signal, and creative fuel.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 15</div><h3>Radical Acceptance</h3><p>The difference between forgiveness, surrender, and genuine peace with the unchangeable.</p></div>
+                <div class="lecture-item"><div class="lecture-num">Lecture 16</div><h3>Post-Traumatic Growth</h3><p>Identity beyond survival: who you become when the emergency is finally over.</p></div>
             </div>
         </div>
 
@@ -249,10 +114,10 @@
     </div>
 
     <footer>
-        <div class="mono" style="margin-bottom: 10px;">988 - CRISIS SUPPORT AVAILABLE</div>
-        <p>© 2025 The Wounded Blueprint. This is peer education based on lived experience and clinical research.</p>
+        <div class="mono" style="margin-bottom: 10px;">988 &mdash; CRISIS SUPPORT AVAILABLE</div>
+        <p>&copy; 2025 <a href="who-i-am.html">Daniel Lingar</a> &mdash; The Wounded Blueprint. Peer education based on lived experience and clinical research.</p>
+        <p style="margin-top: 8px;"><a href="index.html">Home</a> &middot; <a href="the-26-laws.html">26 Laws</a> &middot; <a href="terminology.html">Glossary</a> &middot; <a href="resources.html">Resources</a></p>
     </footer>
 
 </body>
 </html>
-        
