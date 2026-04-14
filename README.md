@@ -1,5 +1,10 @@
 # The Wounded Blueprint
 
+<p align="center">
+  <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663251514784/peyAAcfVglzoCzKU.png" alt="Capitol Contracts LLC Logo" width="300">
+</p>
+
+
 **26 Laws of Survival: A clinical map of Complex PTSD drawn from lived experience. No coddling, no bullshit.**
 
 Live site built on the frameworks from the memoir *From the Storm to the Fire: 26 Laws of Survival* by Daniel Lingar.
