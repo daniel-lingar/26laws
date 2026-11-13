@@ -53,6 +53,6 @@ An interactive, multi-page educational website that translates the lived experie
 
 ## Related Repos
 
-- [`from-the-storm-to-the-fire`](https://github.com/Mave9055/from-the-storm-to-the-fire) — The memoir site
-- [`CPTSD-Straight-Facts`](https://github.com/Mave9055/CPTSD-Straight-Facts) — CPTSD educational platform
-- [`nervous-system-marketing`](https://github.com/Mave9055/nervous-system-marketing) — Outreach assets
+- [`from-the-storm-to-the-fire`](https://github.com/daniel-lingar/from-the-storm-to-the-fire) — The memoir site
+- [`CPTSD-Straight-Facts`](https://github.com/daniel-lingar/CPTSD-Straight-Facts) — CPTSD educational platform
+- [`nervous-system-marketing`](https://github.com/daniel-lingar/nervous-system-marketing) — Outreach assets
